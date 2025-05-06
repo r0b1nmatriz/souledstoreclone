@@ -1,30 +1,103 @@
-# The souled store clone
+# TheSouledStore Clone
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A comprehensive clone of TheSouledStore e-commerce platform, featuring a responsive design, authentication system, admin dashboard, and seamless animations.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/r0b1ns-projects-8fc5b859/v0-the-souled-store-clone)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/xNIpqMy8ELc)
+## Features
 
-## Overview
+- **Responsive Design**: Optimized for iOS, mobile, and desktop
+- **Authentication System**: Secure user authentication with Supabase
+- **Product Catalog**: Browse products by category with filtering options
+- **Shopping Cart**: Add, remove, and update items in your cart
+- **Admin Dashboard**: Shopify-inspired dashboard for managing products, orders, and customers
+- **Smooth Animations**: Enhanced user experience with seamless transitions
+- **ERP & CRM Integration**: Integrated systems for inventory, customer management, and analytics
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Tech Stack
+
+- **Frontend**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Authentication**: Supabase Auth
+- **Database**: Supabase PostgreSQL
+- **State Management**: React Context API
+- **Animations**: Framer Motion
+- **Deployment**: Vercel
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18.0 or later
+- npm or yarn
+- Supabase account
+
+### Installation
+
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/r0b1nmatriz/thesouledstore-clone.git
+   cd thesouledstore-clone
+   \`\`\`
+
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   # or
+   yarn install
+   \`\`\`
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory with the following variables:
+   \`\`\`
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   \`\`\`
+
+4. Run the development server:
+   \`\`\`bash
+   npm run dev
+   # or
+   yarn dev
+   \`\`\`
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+### Accessing the Admin Dashboard
+
+The admin dashboard is available at [http://localhost:3000/admin](http://localhost:3000/admin).
+
+To access the admin dashboard in production:
+1. Create an admin user through the Supabase dashboard
+2. Set the user's role to 'admin' in the profiles table
+3. Log in with the admin credentials
+4. Navigate to `/admin`
+
+## Database Schema
+
+The application uses the following main tables in Supabase:
+
+- **profiles**: User profiles and authentication data
+- **products**: Product information including variants, pricing, and inventory
+- **categories**: Product categories and subcategories
+- **orders**: Order information and status
+- **order_items**: Individual items within orders
+- **cart_items**: Items in user shopping carts
 
 ## Deployment
 
-Your project is live at:
+The application is configured for easy deployment on Vercel:
 
-**[https://vercel.com/r0b1ns-projects-8fc5b859/v0-the-souled-store-clone](https://vercel.com/r0b1ns-projects-8fc5b859/v0-the-souled-store-clone)**
+1. Push your code to a GitHub repository
+2. Import the project in Vercel
+3. Configure the environment variables
+4. Deploy
 
-## Build your app
+## Contributing
 
-Continue building your app on:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-**[https://v0.dev/chat/projects/xNIpqMy8ELc](https://v0.dev/chat/projects/xNIpqMy8ELc)**
+## License
 
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+This project is licensed under the MIT License - see the LICENSE file for details.
